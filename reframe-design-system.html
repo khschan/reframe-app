@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Reframe — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="reframe-style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav__logo">
+    <div class="nav__logo-mark">
+      <!-- Viewfinder hands icon -->
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Top-left corner: two fingers pointing right + down -->
+        <path d="M2 6V2h4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Top-right corner: two fingers pointing left + down -->
+        <path d="M18 6V2h-4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Bottom-left corner: two fingers pointing right + up -->
+        <path d="M2 14v4h4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Bottom-right corner: two fingers pointing left + up -->
+        <path d="M18 14v4h-4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Centre dot / aperture -->
+        <circle cx="10" cy="10" r="1.4" fill="#fff"/>
+      </svg>
+    </div>
+    Reframe
+    <span class="nav__sub">Design System</span>
+  </div>
+  <div class="nav__right">
+    <div class="seg" id="viewSeg">
+      <div class="seg__slider" id="segSlider"></div>
+      <div class="seg__opt active" data-view="branding">Branding</div>
+      <div class="seg__opt" data-view="interactions">Micro-interactions</div>
+    </div>
+    <div class="light-switch" id="themeBtn" title="Toggle light / dark mode">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/>
+      </svg>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<div class="hero">
+  <div class="hero__eyebrow">Design System · v1.0</div>
+  <h1 class="hero__title">Warm Editorial.<br>Built for Curiosity.</h1>
+  <p class="hero__sub">Guidelines, tokens, and live interaction demos for the Reframe app — an art companion that makes galleries feel like home. Toggle between branding reference and micro-interaction playground above.</p>
+</div>
+
+<main class="main">
+
+<!-- ══════════════════════════════════════════════════
+     BRANDING PANEL
+══════════════════════════════════════════════════ -->
+<div class="panel active" id="panel-branding">
+
+  <!-- Colour -->
+  <div class="section-head">
+    <h2>Colour palette</h2>
+    <div class="section-head__line"></div>
+    <div class="section-head__count">3 primary ramps + neutral</div>
+  </div>
+
+  <div class="bento bento--3">
+    <!-- Terracotta -->
+    <div class="tile tile--accent">
+      <div class="tile__label">Primary — Terracotta</div>
+      <div class="colour-strip">
+        <div class="sw-col"><div class="swatch" style="background:#712B13"><div class="swatch__hex">#712B13</div></div><div class="sw-name">Dark</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#993C1D"><div class="swatch__hex">#993C1D</div></div><div class="sw-name">Base</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#D85A30"><div class="swatch__hex">#D85A30</div></div><div class="sw-name sw-name--mid">★ Mid</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#F0997B"><div class="swatch__hex">#F0997B</div></div><div class="sw-name">Light</div></div>
+        <div class="sw-col"><div class="swatch swatch--light-bd" style="background:#FAECE7"><div class="swatch__hex">#FAECE7</div></div><div class="sw-name">Tint</div></div>
+      </div>
+      <div class="colour-meta">
+        <div class="colour-name tc">CTAs · Active states · POI dots</div>
+        <div class="colour-use">Primary interactive colour. Warm and approachable. References terracotta, clay, pigment — grounding the app in physical art materials. Use dark stop for text on light, mid for fills.</div>
+      </div>
+    </div>
+
+    <!-- Teal -->
+    <div class="tile">
+      <div class="tile__label">Secondary — Teal</div>
+      <div class="colour-strip">
+        <div class="sw-col"><div class="swatch" style="background:#085041"><div class="swatch__hex">#085041</div></div><div class="sw-name">Dark</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#0F6E56"><div class="swatch__hex">#0F6E56</div></div><div class="sw-name">Base</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#1D9E75"><div class="swatch__hex">#1D9E75</div></div><div class="sw-name sw-name--teal">★ Mid</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#5DCAA5"><div class="swatch__hex">#5DCAA5</div></div><div class="sw-name">Light</div></div>
+        <div class="sw-col"><div class="swatch swatch--light-bd" style="background:#E1F5EE"><div class="swatch__hex">#E1F5EE</div></div><div class="sw-name">Tint</div></div>
+      </div>
+      <div class="colour-meta">
+        <div class="colour-name teal">Tappable terms · Tooltips · Map routes</div>
+        <div class="colour-use">The "learning" colour. Signals calm, clarity, and information. Every tappable glossary term, tooltip, and Technique stream uses teal — conditioning users to associate it with discovery.</div>
+      </div>
+    </div>
+
+    <!-- Amber -->
+    <div class="tile">
+      <div class="tile__label">Highlight — Amber</div>
+      <div class="colour-strip">
+        <div class="sw-col"><div class="swatch" style="background:#633806"><div class="swatch__hex">#633806</div></div><div class="sw-name">Dark</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#854F0B"><div class="swatch__hex">#854F0B</div></div><div class="sw-name">Base</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#BA7517"><div class="swatch__hex">#BA7517</div></div><div class="sw-name sw-name--amber">★ Mid</div></div>
+        <div class="sw-col"><div class="swatch" style="background:#EF9F27"><div class="swatch__hex">#EF9F27</div></div><div class="sw-name">Light</div></div>
+        <div class="sw-col"><div class="swatch swatch--light-bd" style="background:#FAEEDA"><div class="swatch__hex">#FAEEDA</div></div><div class="sw-name">Tint</div></div>
+      </div>
+      <div class="colour-meta">
+        <div class="colour-name amber">Discovery moments · Saved · Audio</div>
+        <div class="colour-use">Sparingly used for moments of delight: bookmark fill on save, recommendation labels, audio progress. Used rarely to preserve its attention-pulling weight.</div>
+      </div>
+    </div>
+
+    <!-- Surface ramp -->
+    <div class="tile tile--wide">
+      <div class="tile__label">Neutral surface ramp</div>
+      <div class="surface-grid">
+        <div class="surface-step">
+          <div class="surface-swatch" style="background:var(--bg0)"></div>
+          <div class="surface-name">Base</div>
+          <div class="surface-val">Light #FDFAF6 / Dark #120E0B</div>
+        </div>
+        <div class="surface-step">
+          <div class="surface-swatch" style="background:var(--bg1)"></div>
+          <div class="surface-name">Surface</div>
+          <div class="surface-val">Light #F7F4EF / Dark #1A1612</div>
+        </div>
+        <div class="surface-step">
+          <div class="surface-swatch" style="background:var(--bg2)"></div>
+          <div class="surface-name">Elevated</div>
+          <div class="surface-val">Light #EDE9E2 / Dark #231F1A</div>
+        </div>
+        <div class="surface-step">
+          <div class="surface-swatch" style="background:var(--bg3)"></div>
+          <div class="surface-name">Card</div>
+          <div class="surface-val">Light #E3DDD5 / Dark #2E281F</div>
+        </div>
+      </div>
+      <p class="surface-note">The base uses a warm off-white linen (#FDFAF6) rather than pure white — giving terracotta accents a natural resting surface. Each elevation step is ~6–8 lightness units apart: perceptible but not jarring. In dark mode the base has a warm brown tint, keeping the palette coherent across both modes.</p>
+    </div>
+  </div>
+
+  <!-- Colour psychology -->
+  <div class="section-head"><h2>Colour psychology</h2><div class="section-head__line"></div></div>
+  <div class="psych-grid">
+    <div class="psych-card"><div class="psych-name"><span class="psych-dot" style="background:var(--tc-mid)"></span>Terracotta</div><div class="psych-use">Curiosity, warmth, human. References clay and pigment — anchoring the app in physical art-making. Primary action colour.</div></div>
+    <div class="psych-card"><div class="psych-name"><span class="psych-dot" style="background:var(--tl-mid)"></span>Teal</div><div class="psych-use">Calm, clarity, learning. Every tappable term uses teal — conditioning users: "this colour means there is something to discover here."</div></div>
+    <div class="psych-card"><div class="psych-name"><span class="psych-dot" style="background:var(--am-mid)"></span>Amber</div><div class="psych-use">Discovery, attention, delight. Used sparingly — bookmark confirms, audio progress, recommendations. Rarity preserves its weight.</div></div>
+  </div>
+
+  <!-- Typography -->
+  <div class="section-head"><h2>Typography</h2><div class="section-head__line"></div><div class="section-head__count">2 typefaces</div></div>
+  <div class="bento bento--2">
+    <div class="tile">
+      <div class="tile__label">Display — DM Serif Display</div>
+      <div class="type-stack">
+        <div class="type-row">
+          <span class="ts-display ts-32">Exhibit Title</span>
+          <span class="type-row__meta">32px · italic available · −0.02em</span>
+        </div>
+        <div class="type-row">
+          <span class="ts-display ts-22">Screen heading</span>
+          <span class="type-row__meta">22px · H1</span>
+        </div>
+        <div class="type-row">
+          <span class="ts-display ts-18">Artwork Title</span>
+          <span class="type-row__meta">18px · H2</span>
+        </div>
+        <div class="type-row">
+          <span class="ts-display ts-16i">"The most ambitious work"</span>
+          <span class="type-row__meta">16px italic · pull quote</span>
+        </div>
+      </div>
+    </div>
+    <div class="tile">
+      <div class="tile__label">Body — Inter</div>
+      <div class="type-stack">
+        <div class="type-row">
+          <span class="ts-body ts-16m">Section heading</span>
+          <span class="type-row__meta">16px · 500</span>
+        </div>
+        <div class="type-row">
+          <span class="ts-body ts-14">Card title &amp; body text</span>
+          <span class="type-row__meta">14px · 400 · lh 1.7</span>
+        </div>
+        <div class="type-row">
+          <span class="ts-body ts-13 t2">Button label · metadata</span>
+          <span class="type-row__meta">13px · 400/500</span>
+        </div>
+        <div class="type-row">
+          <span class="ts-body ts-11 t3">Caption · gallery meta · sub-label</span>
+          <span class="type-row__meta">11px · 400</span>
+        </div>
+        <div class="type-row">
+          <span class="ts-label">Section label</span>
+          <span class="type-row__meta">10px · 600 · +0.1em upper</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tags -->
+  <div class="tile" style="margin-top:12px">
+    <div class="tile__label">Tags — semantic colour mapping</div>
+    <div class="tags-row">
+      <span class="tag tag--tc">Impressionism</span>
+      <span class="tag tag--tc">Baroque</span>
+      <span class="tag tag--tl">Nature</span>
+      <span class="tag tag--tl">War &amp; Conflict</span>
+      <span class="tag tag--am">1900–1950</span>
+      <span class="tag tag--am">Pre-1400</span>
+      <span class="tag tag--neutral">France</span>
+      <span class="tag tag--neutral">Italian</span>
+    </div>
+    <p class="tag-note">Tags use colour semantically — not decoratively. Terracotta = movement/period. Teal = subject/theme. Amber = time period. Grey = geography/neutral. A tag is a compressed filter chip; the same hue appears in the filter panel, creating a mapping users internalise over time.</p>
+  </div>
+
+  <!-- Border radius -->
+  <div class="section-head"><h2>Border radius</h2><div class="section-head__line"></div></div>
+  <div class="tile">
+    <div class="tile__label">Radius scale</div>
+    <div class="radius-demo">
+      <div class="r-col"><div class="r-box" style="border-radius:4px"><span>4</span></div><div class="r-label">Tags · chips</div></div>
+      <div class="r-col"><div class="r-box" style="border-radius:8px"><span>8</span></div><div class="r-label">Inputs · tabs</div></div>
+      <div class="r-col"><div class="r-box" style="border-radius:10px"><span>10</span></div><div class="r-label">Buttons</div></div>
+      <div class="r-col"><div class="r-box" style="border-radius:12px"><span>12</span></div><div class="r-label">Cards</div></div>
+      <div class="r-col"><div class="r-box" style="border-radius:16px"><span>16</span></div><div class="r-label">Panels</div></div>
+      <div class="r-col"><div class="r-box" style="border-radius:20px"><span>20</span></div><div class="r-label">Search</div></div>
+      <div class="r-col"><div class="r-box" style="border-radius:100px;width:52px"><span>∞</span></div><div class="r-label">Pills</div></div>
+    </div>
+  </div>
+
+  <!-- Spacing -->
+  <div class="section-head"><h2>Spacing &amp; gaps</h2><div class="section-head__line"></div></div>
+  <div class="bento bento--2">
+    <div class="tile">
+      <div class="tile__label">Spacing scale (px)</div>
+      <div class="sp-strip">
+        <div class="sp-row"><div class="sp-label">sp-4</div><div class="sp-bar" style="width:4px"></div><div class="sp-val">4px — icon gap</div></div>
+        <div class="sp-row"><div class="sp-label">sp-8</div><div class="sp-bar" style="width:16px"></div><div class="sp-val">8px — inline gap</div></div>
+        <div class="sp-row"><div class="sp-label">sp-12</div><div class="sp-bar" style="width:36px"></div><div class="sp-val">12px — component pad</div></div>
+        <div class="sp-row"><div class="sp-label">sp-16</div><div class="sp-bar" style="width:64px"></div><div class="sp-val">16px — screen pad · card gap</div></div>
+        <div class="sp-row"><div class="sp-label">sp-20</div><div class="sp-bar" style="width:80px"></div><div class="sp-val">20px — section gap</div></div>
+        <div class="sp-row"><div class="sp-label">sp-24</div><div class="sp-bar" style="width:96px"></div><div class="sp-val">24px — tile padding</div></div>
+        <div class="sp-row"><div class="sp-label">sp-32</div><div class="sp-bar" style="width:128px"></div><div class="sp-val">32px — large section</div></div>
+        <div class="sp-row"><div class="sp-label">sp-48</div><div class="sp-bar" style="width:200px;max-width:100%"></div><div class="sp-val">48px — hero pad</div></div>
+      </div>
+    </div>
+    <div class="tile">
+      <div class="tile__label">Grid gaps</div>
+      <div class="gap-examples">
+        <div class="gap-example">
+          <div class="gap-example__label">Bento grid — 12px gap</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+            <div class="gap-block"></div>
+            <div class="gap-block"></div>
+            <div class="gap-block"></div>
+          </div>
+        </div>
+        <div class="gap-example">
+          <div class="gap-example__label">Chip row — 6px gap</div>
+          <div style="display:flex;gap:6px">
+            <div class="gap-chip gap-chip--active"></div>
+            <div class="gap-chip"></div>
+            <div class="gap-chip"></div>
+          </div>
+        </div>
+        <div class="gap-example">
+          <div class="gap-example__label">List rows — .5px divider</div>
+          <div class="gap-list">
+            <div class="gap-list-row">Result row</div>
+            <div class="gap-list-row">Result row</div>
+            <div class="gap-list-row" style="border-bottom:none">Result row</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons & inputs -->
+  <div class="section-head"><h2>Buttons &amp; inputs</h2><div class="section-head__line"></div></div>
+  <div class="bento bento--2">
+    <div class="tile">
+      <div class="tile__label">Button variants</div>
+      <div class="btn-grid">
+        <button class="btn btn--primary">Explore exhibit</button>
+        <button class="btn btn--ghost">Save artwork</button>
+        <button class="btn btn--outline">See similar works</button>
+        <button class="btn btn--teal">Start gallery tour</button>
+        <button class="btn btn--amber">Filter results</button>
+        <button class="btn btn--primary btn--sm">Small</button>
+        <button class="btn btn--primary btn--lg">Large CTA</button>
+      </div>
+    </div>
+    <div class="tile">
+      <div class="tile__label">Input states</div>
+      <div class="input-demo">
+        <div class="input">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="4" stroke="currentColor" stroke-width="1.2"/><path d="M9.5 9.5L12 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Search titles, artists, keywords…
+        </div>
+        <div class="input input--focused">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="4" stroke="var(--tc-mid)" stroke-width="1.2"/><path d="M9.5 9.5L12 12" stroke="var(--tc-mid)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Water Lil<span class="cursor"></span>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag--tc" style="cursor:pointer;padding:4px 10px;font-size:11px">All ✕</span>
+          <span class="tag tag--neutral" style="cursor:pointer;padding:4px 10px;font-size:11px">Artists</span>
+          <span class="tag tag--neutral" style="cursor:pointer;padding:4px 10px;font-size:11px">Artworks</span>
+          <span class="tag tag--am" style="cursor:pointer;padding:4px 10px;font-size:11px">⊞ Filter</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Border usage -->
+  <div class="section-head"><h2>Border usage</h2><div class="section-head__line"></div></div>
+  <div class="tile">
+    <div class="tile__label">Border opacity scale</div>
+    <div class="border-demo">
+      <div class="border-step">
+        <div class="border-swatch" style="border:1px solid rgba(136,135,128,.06)"></div>
+        <div class="border-label">6% — dividers</div>
+      </div>
+      <div class="border-step">
+        <div class="border-swatch" style="border:1px solid rgba(136,135,128,.18)"></div>
+        <div class="border-label">18% — default card</div>
+      </div>
+      <div class="border-step">
+        <div class="border-swatch" style="border:1px solid rgba(136,135,128,.32)"></div>
+        <div class="border-label">32% — interactive</div>
+      </div>
+      <div class="border-step">
+        <div class="border-swatch" style="border:1px solid rgba(153,60,29,.35)"></div>
+        <div class="border-label tc">35% — focused input</div>
+      </div>
+      <div class="border-step">
+        <div class="border-swatch" style="border:2px solid rgba(153,60,29,.6)"></div>
+        <div class="border-label tc">Featured card only</div>
+      </div>
+    </div>
+    <p class="border-note">Border weight is always <code>.5px</code> except for the one special case of a "featured" card (2px). Borders use rgba opacity rather than fixed hex values so they work in both themes without separate declarations.</p>
+  </div>
+
+</div><!-- /panel-branding -->
+
+
+<!-- ══════════════════════════════════════════════════
+     MICRO-INTERACTIONS PANEL
+══════════════════════════════════════════════════ -->
+<div class="panel" id="panel-interactions">
+
+  <!-- Motion system -->
+  <div class="section-head"><h2>Motion system</h2><div class="section-head__line"></div><div class="section-head__count">GSAP powered</div></div>
+  <div class="bento bento--2">
+    <div class="tile">
+      <div class="tile__label">Duration tokens</div>
+      <div class="dur-stack">
+        <div class="dur-row">
+          <div class="dur-name">--dur-fast</div>
+          <div class="dur-bar" style="width:60px"></div>
+          <div class="dur-ms">150ms</div>
+          <div class="dur-use">Tap states, chip toggles</div>
+        </div>
+        <div class="dur-row">
+          <div class="dur-name">--dur-mid</div>
+          <div class="dur-bar" style="width:110px"></div>
+          <div class="dur-ms">260ms</div>
+          <div class="dur-use">Tab slides, crossfades</div>
+        </div>
+        <div class="dur-row">
+          <div class="dur-name">--dur-slow</div>
+          <div class="dur-bar" style="width:160px;max-width:100%"></div>
+          <div class="dur-ms">420ms</div>
+          <div class="dur-use">Sheet enter, page load</div>
+        </div>
+        <div class="dur-row">
+          <div class="dur-name">--dur-xslow</div>
+          <div class="dur-bar" style="width:220px;max-width:100%"></div>
+          <div class="dur-ms">600ms</div>
+          <div class="dur-use">Image develop-in, map draw</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile__label">Easing curves — click to animate</div>
+      <div class="ease-row" id="easeDemo">
+        <div class="ease-item" data-ease="power3.out" data-dur="0.42">
+          <div class="ease-name">power3.out</div>
+          <div class="ease-track"><div class="ease-ball"></div></div>
+          <div class="ease-spec">Default transition</div>
+        </div>
+        <div class="ease-item" data-ease="back.out(1.4)" data-dur="0.32">
+          <div class="ease-name">back.out</div>
+          <div class="ease-track"><div class="ease-ball"></div></div>
+          <div class="ease-spec">Chip select, tab slide</div>
+        </div>
+        <div class="ease-item" data-ease="elastic.out(1.2,0.5)" data-dur="0.8">
+          <div class="ease-name">elastic.out</div>
+          <div class="ease-track"><div class="ease-ball"></div></div>
+          <div class="ease-spec">POI dot, bookmark save</div>
+        </div>
+        <div class="ease-item" data-ease="bounce.out" data-dur="0.7">
+          <div class="ease-name">bounce.out</div>
+          <div class="ease-track"><div class="ease-ball"></div></div>
+          <div class="ease-spec">Tab icon bounce on tap</div>
+        </div>
+        <div class="ease-item" data-ease="power2.in" data-dur="0.22">
+          <div class="ease-name">power2.in</div>
+          <div class="ease-track"><div class="ease-ball"></div></div>
+          <div class="ease-spec">Dismiss / exit animations</div>
+        </div>
+      </div>
+      <p class="ease-note">Golden rule: everything decelerates into rest — never accelerates. Only exits use power2.in.</p>
+    </div>
+  </div>
+
+  <!-- Live demos -->
+  <div class="section-head"><h2>Live demos</h2><div class="section-head__line"></div><div class="section-head__count">tap to trigger</div></div>
+
+  <div class="bento bento--3">
+
+    <!-- 1. Bookmark -->
+    <div class="tile">
+      <div class="tile__label">Bookmark · ink-stroke</div>
+      <div class="bm-demo">
+        <div class="bm-btn" id="bmBtn">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
+            <path id="bmPath" d="M5 3h10v14l-5-3.5L5 17V3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="bm-label" id="bmLabel">Click to save</div>
+      </div>
+      <p class="demo-note">Icon draws itself via stroke-dashoffset on save. Elastic rebound overshoots 1.25× then settles. Amber fill on saved state.</p>
+    </div>
+
+    <!-- 2. Like -->
+    <div class="tile">
+      <div class="tile__label">Like · number roll</div>
+      <div class="like-wrap">
+        <div class="like-btn" id="likeBtn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path id="heartPath" d="M8 14l-5.5-5.5a3.89 3.89 0 010-5.5 3.89 3.89 0 015.5 0 3.89 3.89 0 015.5 0 3.89 3.89 0 010 5.5L8 14z" stroke="currentColor" stroke-width="1.3"/>
+          </svg>
+          <span class="like-count" id="likeCount">42</span>
+        </div>
+      </div>
+      <p class="demo-note">Heart compresses then rebounds with elastic overshoot. Count rolls — old slides up-out, new slides up-in. No particles.</p>
+    </div>
+
+    <!-- 3. Audio player -->
+    <div class="tile">
+      <div class="tile__label">Audio guide · play/pause morph</div>
+      <div class="player">
+        <div class="player__row">
+          <button class="player__btn" id="playerBtn">
+            <svg id="pPlayIcon" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 2l7 4-7 4V2z" fill="currentColor"/></svg>
+            <svg id="pPauseIcon" width="12" height="12" viewBox="0 0 12 12" fill="none" style="display:none"><rect x="2.5" y="2" width="3" height="8" rx="1" fill="currentColor"/><rect x="6.5" y="2" width="3" height="8" rx="1" fill="currentColor"/></svg>
+          </button>
+          <div class="player__info">
+            <div class="player__track">Curator commentary</div>
+            <div class="player__bar"><div class="player__fill" id="playerFill"></div></div>
+          </div>
+          <div class="player__time" id="playerTime">0:00</div>
+        </div>
+      </div>
+      <p class="demo-note">Play icon morphs to pause bars. Fill activates left-to-right like a needle drop. Buffering state shows breathing pulse.</p>
+    </div>
+
+    <!-- 4. Stream tabs -->
+    <div class="tile">
+      <div class="tile__label">Stream tabs · sliding indicator</div>
+      <div class="stream-tabs" id="streamTabs">
+        <div class="stream-slider" id="streamSlider"></div>
+        <div class="stream-tab active" data-idx="0">Narrative</div>
+        <div class="stream-tab" data-idx="1">History</div>
+        <div class="stream-tab" data-idx="2">Technique</div>
+        <div class="stream-tab" data-idx="3">Culture</div>
+      </div>
+      <div class="stream-content-demo" id="streamContentDemo">Monet described this series as his most ambitious work — the <span class="term">[water lilies]</span> becoming an obsession at Giverny.</div>
+      <p class="demo-note">Indicator slides with ease-out-back overshoot. Content crossfades (outgoing: fade + shift up; incoming: fade in from below).</p>
+    </div>
+
+    <!-- 5. POI dots -->
+    <div class="tile">
+      <div class="tile__label">POI dots · tap to reveal</div>
+      <div class="poi-stage" id="poiStage">
+        <div class="poi" id="poi1" style="left:30%;top:45%">1<div class="poi__ring"></div></div>
+        <div class="poi poi--dim" id="poi2" style="left:60%;top:60%">2<div class="poi__ring"></div></div>
+        <div class="poi-card-demo" id="poiCardDemo">
+          <div class="poi-card-demo__title">Reflective surface technique</div>
+          <div class="poi-card-demo__text">Monet dissolves the boundary between water and sky — no horizon line.</div>
+        </div>
+      </div>
+      <p class="demo-note">Dots enter staggered with elastic.out. Tap: dot presses in (scale 0.82), card slides up. Untouched dots dim to 40% opacity.</p>
+    </div>
+
+    <!-- 6. Term tooltip -->
+    <div class="tile">
+      <div class="tile__label">Term tooltip · bloom up</div>
+      <div class="term-demo-wrap">
+        Working with <span class="term tooltip-wrap" id="termTrigger">
+          [Impressionist brushwork]
+          <div class="tooltip-box" id="tooltipBox">
+            <div class="tooltip-box__term">Impressionist brushwork</div>
+            Loose, visible strokes applied rapidly to capture transient light conditions rather than smooth, blended surfaces.
+          </div>
+        </span> at scale, Monet used a panoramic format to dissolve spatial certainty.
+      </div>
+      <p class="demo-note">Tooltip blooms upward from the tapped term. Tap outside or term again to dismiss.</p>
+    </div>
+
+    <!-- 7. Skeleton loader -->
+    <div class="tile">
+      <div class="tile__label">Skeleton loader · warm shimmer</div>
+      <div class="skeleton-stage" id="skelStage">
+        <div class="skel skel-img"></div>
+        <div class="skel skel-line" style="width:75%"></div>
+        <div class="skel skel-line" style="width:55%"></div>
+        <div class="skel skel-line" style="width:35%"></div>
+      </div>
+      <button class="btn btn--outline btn--sm" id="skelBtn" style="margin-top:12px">Simulate load</button>
+      <p class="demo-note">Shimmer moves at candlelight pace (slow, warm). Images resolve from desaturated blur — a Polaroid developing.</p>
+    </div>
+
+    <!-- 8. Pull to refresh -->
+    <div class="tile">
+      <div class="tile__label">Pull to refresh · frame motif</div>
+      <div class="pull-stage" id="pullStage">
+        <div class="pull-indicator" id="pullIndicator" style="display:none">
+          <div class="pull-frame" id="pullFrame">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M2 6V2h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 6V2h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 12v4h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div id="pullHint" class="pull-hint">Pull to refresh</div>
+        </div>
+        <div class="pull-content" id="pullContent">
+          <div class="pull-line"></div>
+          <div class="pull-line" style="width:60%"></div>
+          <div class="pull-line"></div>
+          <div class="pull-line" style="width:80%"></div>
+        </div>
+      </div>
+      <button class="btn btn--outline btn--sm" id="pullBtn" style="margin-top:10px">Trigger refresh</button>
+      <p class="demo-note">Pull reveals the Reframe viewfinder motif that fills as tension increases. Release fires refresh; cards cascade in with 40ms stagger.</p>
+    </div>
+
+    <!-- 9. Screen transition -->
+    <div class="tile">
+      <div class="tile__label">Screen transition · directional slide</div>
+      <div class="trans-btns">
+        <button class="btn btn--primary btn--sm" id="transForward">Navigate forward →</button>
+        <button class="btn btn--outline btn--sm" id="transBack">← Back</button>
+      </div>
+      <div class="trans-stage">
+        <div id="screenA" class="trans-screen trans-screen--a">Home screen</div>
+        <div id="screenB" class="trans-screen trans-screen--b">Artwork detail</div>
+      </div>
+      <p class="demo-note">Entering screen slides from +width to 0 (power3.out, 380ms). Leaving slides to −60px and fades — depth without full parallax.</p>
+    </div>
+
+    <!-- 10. Toggle switch -->
+    <div class="tile">
+      <div class="tile__label">Toggle switch · snap with back easing</div>
+      <div class="toggle-list-demo">
+        <div class="toggle-demo-row">
+          <span>Artist's Narrative</span>
+          <div class="toggle on" id="toggle1"></div>
+        </div>
+        <div class="toggle-demo-row">
+          <span>Historical Context</span>
+          <div class="toggle" id="toggle2"></div>
+        </div>
+        <div class="toggle-demo-row">
+          <span>Art Technique</span>
+          <div class="toggle on" id="toggle3"></div>
+        </div>
+      </div>
+      <p class="demo-note">Thumb snaps with back.out(2) — a tiny physical rebound confirms the state change. Track colour transitions at --dur-mid.</p>
+    </div>
+
+    <!-- 11. Chip select -->
+    <div class="tile">
+      <div class="tile__label">Chip select · scale pulse</div>
+      <div class="chip-demo-row" id="chipDemo">
+        <span class="chip-sel active-chip" data-label="Impressionism">Impressionism</span>
+        <span class="chip-sel" data-label="Surrealism">Surrealism</span>
+        <span class="chip-sel" data-label="Baroque">Baroque</span>
+        <span class="chip-sel" data-label="Pop Art">Pop Art</span>
+        <span class="chip-sel" data-label="Cubism">Cubism</span>
+        <span class="chip-sel chip-sel--teal" data-label="Nature">Nature</span>
+      </div>
+      <p class="demo-note">Chip scales to 1.08× on click then snaps back with back.out(2). Fill floods in at --dur-fast.</p>
+    </div>
+
+    <!-- 12. Card hover lift -->
+    <div class="tile">
+      <div class="tile__label">Card hover · lift &amp; press</div>
+      <div class="hover-grid">
+        <div class="art-card hover-card">
+          <div class="art-card__img art-card__img--a"></div>
+          <div class="art-card__body">
+            <div class="art-card__title">Water Lilies</div>
+            <div class="art-card__meta">Monet · 1906</div>
+          </div>
+        </div>
+        <div class="art-card hover-card">
+          <div class="art-card__img art-card__img--b"></div>
+          <div class="art-card__body">
+            <div class="art-card__title">Starry Night</div>
+            <div class="art-card__meta">van Gogh · 1889</div>
+          </div>
+        </div>
+      </div>
+      <p class="demo-note">Hover lifts card −4px. Press scales to 0.97×. Release snaps back with ease-out-back.</p>
+    </div>
+
+  </div><!-- /bento--3 -->
+
+  <!-- Golden rules -->
+  <div class="section-head"><h2>Motion golden rules</h2><div class="section-head__line"></div></div>
+  <div class="tile tile--wide">
+    <div class="rules-grid">
+      <div class="rule">
+        <div class="rule__num">1</div>
+        <div class="rule__title">Decelerate always</div>
+        <div class="rule__text">Everything decelerates into its resting state. Only exits and dismissals use accelerating curves (power2.in). Never accelerate into a rest.</div>
+      </div>
+      <div class="rule">
+        <div class="rule__num">2</div>
+        <div class="rule__title">Physical weight = back easing</div>
+        <div class="rule__text">Reserve elastic / back overshoot for elements with physical mass in the metaphor: tab indicators, dragged cards, the bookmark rebound.</div>
+      </div>
+      <div class="rule">
+        <div class="rule__num">3</div>
+        <div class="rule__title">Nothing loops unless communicating</div>
+        <div class="rule__text">POI pulse rings loop because they signal "there is something here." Audio waveforms loop because audio is playing. No decorative loops.</div>
+      </div>
+      <div class="rule">
+        <div class="rule__num">4</div>
+        <div class="rule__title">Stagger creates hierarchy</div>
+        <div class="rule__text">When multiple items appear, stagger at 30–60ms. This creates sequence and lets the user track what just happened.</div>
+      </div>
+      <div class="rule">
+        <div class="rule__num">5</div>
+        <div class="rule__title">Responses feel instant</div>
+        <div class="rule__text">Tap feedback must fire within 16ms (one frame). GSAP effects are visual polish on top of an already-responded state — never blocking.</div>
+      </div>
+      <div class="rule">
+        <div class="rule__num">6</div>
+        <div class="rule__title">Image loads are Polaroids</div>
+        <div class="rule__text">Artwork images never fade from nothing. They appear at full size as a desaturated blur, then gain colour over ~400ms — developing like a Polaroid.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /panel-interactions -->
+</main>
+
+<footer class="foot">Reframe Design System · Built with GSAP · DM Serif Display + Inter · Warm Editorial</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="reframe-app.js"></script>
+</body>
+</html>
