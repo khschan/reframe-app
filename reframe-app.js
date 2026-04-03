@@ -411,7 +411,7 @@ function initTermTooltip() {
 }
 
 /* ═══════════════════════════════════════════════
-   SKELETON LOADER — shimmer → Polaroid reveal
+   SKELETON LOADER — shimmer
 ═══════════════════════════════════════════════ */
 function initSkeletonLoader() {
   const btn   = $('#skelBtn');
@@ -435,7 +435,7 @@ function initSkeletonLoader() {
           stage.innerHTML = `
             <div id="loadedImg" style="height:90px;border-radius:8px;background:linear-gradient(145deg,#C8D5C0,#A4B890);filter:saturate(0) blur(4px);transition:filter 0.5s ease;overflow:hidden"></div>
             <div style="font-size:13px;font-weight:500;color:var(--t1);padding:4px 0">Water Lilies</div>
-            <div style="font-size:11px;color:var(--t3)">Claude Monet · 1906</div>
+            <div style="font-size:11px;color:var(--t3)">Claude Monet · 1908</div>
           `;
           const img = $('#loadedImg');
           gsap.fromTo(

@@ -26,6 +26,13 @@
   --am-light: #EF9F27;
   --am-tint:  #FAEEDA;
 
+  /* Semantic tags */
+  --nar:  #D75930;
+  --tech: #326FB5;
+  --his:  #BC1C1C;
+  --geo:  #1B9D75;
+  --pop:  #7e50b3;
+
   /* Border radius */
   --r4:    4px;
   --r8:    8px;
@@ -426,7 +433,7 @@ body {
   gap: 12px;
 }
 .type-row:last-child { border-bottom: none; }
-.type-row__meta { font-size: 10px; color: var(--t4); white-space: nowrap; }
+.type-row__meta { font-size: 10px; color: var(--t2); white-space: nowrap; }
 
 /* Type specimens */
 .ts-display { font-family: var(--font-display); color: var(--t1); }
@@ -445,7 +452,7 @@ body {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--t4);
+  color: var(--t3);
 }
 .t2 { color: var(--t2); }
 .t3 { color: var(--t3); }
@@ -462,10 +469,11 @@ body {
   padding: 3px 9px;
   border-radius: var(--r4);
 }
-.tag--tc      { background: var(--tc-tint); color: var(--tc); }
-.tag--tl      { background: var(--tl-tint); color: var(--tl); }
-.tag--am      { background: var(--am-tint); color: var(--am); }
-.tag--neutral { background: var(--bg2);     color: var(--t2); }
+.tag--tech     { background: var(--tech); color: var(--tc-tint); }
+.tag--nar      { background: var(--nar); color: var(--tc-tint); }
+.tag--his      { background: var(--his); color: var(--tc-tint); }
+.tag--geo      { background: var(--geo); color: var(--tc-tint); }
+.tag--pop      { background: var(--pop); color: var(--tc-tint); }
 .tag-note { font-size: 12px; color: var(--t3); line-height: 1.7; }
 
 /* ─── Border radius demo ────────────────────── */
@@ -680,9 +688,9 @@ body {
   transition: background .2s, color .2s;
 }
 .like-btn.liked {
-  color: var(--tc-mid);
-  background: var(--tc-tint);
-  border-color: rgba(216,90,48,.2);
+  color: var(--am-light);
+  background: var(--am-tint);
+  border-color: var(--am-light);
 }
 .like-count {
   font-weight: 500;
