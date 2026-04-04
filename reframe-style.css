@@ -433,7 +433,7 @@ body {
   gap: 12px;
 }
 .type-row:last-child { border-bottom: none; }
-.type-row__meta { font-size: 10px; color: var(--t2); white-space: nowrap; }
+.type-row__meta { font-size: 10px; color: var(--t2); white-space: nowrap; text-wrap: wrap; text-align: right; }
 
 /* Type specimens */
 .ts-display { font-family: var(--font-display); color: var(--t1); }
